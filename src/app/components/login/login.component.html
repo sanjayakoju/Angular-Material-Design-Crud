@@ -1,0 +1,24 @@
+
+<div class="container">
+  <div [hidden]="loggedIn">
+<form  class="example-form">
+    <h4>Login Form</h4>
+    <mat-form-field class="example-full-width">
+      <input matInput [(ngModel)]="credential.username"  name="username" id='username' placeholder="username" required>
+      <mat-error>This field is required</mat-error>
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <input matInput   name="password" [(ngModel)]="credential.password" id='password' placeholder="password" required>
+    </mat-form-field>
+        <button type="submit" class="btn-success" (click)=onSubmit()>Login</button>
+  </form>
+  </div>
+  <div [hidden]="!loggedIn">
+      <h2>You have logged in!</h2>
+    </div>
+  </div>
+
+
+
+  
